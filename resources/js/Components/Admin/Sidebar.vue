@@ -69,7 +69,6 @@
                         'active open':
                             isActiveRoute('customers.index') ||
                             isActiveRoute('customers.create') ||
-                            isActiveRoute('customers.') ||
                             isActiveRoute('customers.trash'),
                     }"
                 >
