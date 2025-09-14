@@ -6,7 +6,7 @@
         <div class="app-brand demo p-2 m-0" style="height: 100px">
             <div class="d-flex flex-column">
                 <Link
-                    class="app-brand-link p-0 d-flex justify-content-center align-items-center "
+                    class="app-brand-link p-0 d-flex justify-content-center align-items-center"
                     :href="route('dashboard')"
                     style="height: 60px"
                 >
@@ -33,7 +33,9 @@
         <div class="menu-container">
             <div class="menu-inner-shadow"></div>
             <ul class="menu-inner py-1">
-                <!-- Dashboard -->
+                <li class="menu-header small text-uppercase">
+                    <span class="menu-header-text">Overview</span>
+                </li>
                 <li
                     :class="{
                         'menu-item': true,
@@ -67,6 +69,7 @@
                         'active open':
                             isActiveRoute('customers.index') ||
                             isActiveRoute('customers.create') ||
+                            isActiveRoute('customers.') ||
                             isActiveRoute('customers.trash'),
                     }"
                 >

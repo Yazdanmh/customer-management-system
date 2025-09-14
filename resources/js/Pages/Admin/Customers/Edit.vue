@@ -8,6 +8,9 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item">
+                    <Link href="#">Pages</Link>
+                </li>
+                <li class="breadcrumb-item">
                     <Link :href="route('customers.index')">Customers</Link>
                 </li>
                 <li class="breadcrumb-item active text-muted" aria-current="page">
