@@ -97,7 +97,7 @@ class BackupController extends Controller implements \Illuminate\Routing\Control
             function () {
                 $userId = Auth::id();
                 ProcessDbBackup::dispatch($userId);
-                return redirect()->back()->with('message', 'Database backup has been started.');
+                return redirect()->back()->with('message', 'Database backup started (check backups list after some time).');
             },
             'Database Backup',
             'Database backup failed',
@@ -105,6 +105,7 @@ class BackupController extends Controller implements \Illuminate\Routing\Control
             DatabaseBackup::class
         );
     }
+
 
     public function fullBackup()
     {

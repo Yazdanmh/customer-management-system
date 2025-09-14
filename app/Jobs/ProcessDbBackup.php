@@ -34,11 +34,15 @@ class ProcessDbBackup implements ShouldQueue
     {
         try {
             $backup_file = $this->performBackup($this->userId);
-            return redirect()->back()->with('message', 'Database backup created successfully: ' . $backup_file);
+
+            Log::info('Database backup created successfully', [
+                'user_id' => $this->userId,
+                'file' => $backup_file
+            ]);
         } catch (\Exception $e) {
-            Log::error('Database backup failed for user ' . $this->userId, [
+            Log::error('Database backup failed', [
+                'user_id' => $this->userId,
                 'error' => $e->getMessage(),
-                'trace' => $e->getTraceAsString(),
             ]);
             throw $e;
         }

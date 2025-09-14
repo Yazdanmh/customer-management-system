@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Storage;
 use Inertia\Inertia;
 use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Arr;
-
+use App\Http\Controllers\backend\HelperController;
 class SettingController extends Controller implements \Illuminate\Routing\Controllers\HasMiddleware
 {
     protected $helper;
